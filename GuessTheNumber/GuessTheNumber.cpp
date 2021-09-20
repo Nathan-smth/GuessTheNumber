@@ -5,7 +5,18 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	int userGuess = 0;
+
+	int randomNum = 0;
+
+	std::cout << "please enter your guess\n";
+	std::cin >> userGuess;
+
+
+
+
+	std::cout << "you guessed:" << userGuess <<"\n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
