@@ -2,20 +2,65 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
 
 int main()
 {
 	int userGuess = 0;
 
 	int randomNum = 0;
-
+	bool done = false;
 	std::cout << "please enter your guess\n";
 	std::cin >> userGuess;
+	int numOfGuesses = 1;
+
+	std::srand(time(NULL));
+	int totalRandom = rand() & 10 + 0;
+	std::cout << "\n";
+	std::cout << "\n";
+
+	do{
+
+		
+
+		if (userGuess == totalRandom)
+		{
+			std::cout << "Well done you guessed right!\n";
+
+			done = true;
+			std::cout << "\n";
+			std::cout << "The random number was: " << totalRandom << "\n";
+			std::cout << "\n";
+			std::cout << "You guessed " << numOfGuesses << " times." << "\n";
+		}
+
+		else if (userGuess > totalRandom)
+		{
+			std::cout << "Too high!\n";
+			std::cout << "please enter your guess\n";
+			std::cin >> userGuess;
+		}
+		else
+		{
+			std::cout << "Too low!\n";
+			std::cout << "please enter your guess\n";
+			std::cin >> userGuess;
+		}
+
+		numOfGuesses++;
 
 
 
 
-	std::cout << "you guessed:" << userGuess <<"\n";
+		std::cout << "\n";
+		std::cout << "\n";
+
+		
+
+		
+
+	} while (!done);
+	return 0;
 
 }
 
